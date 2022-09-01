@@ -2,6 +2,7 @@
 set -e
 
 echo "Activating feature 'bash-completion'"
+echo "User: ${USERNAME}"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
