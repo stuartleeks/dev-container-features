@@ -1,0 +1,7 @@
+{
+    "name": "Bash completion",
+    "id": "bash-completion",
+    "version": "0.0.1",
+    "description": "Ensure bash-completion is installed",
+    "options": {}
+}

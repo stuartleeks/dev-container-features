@@ -1,4 +1,5 @@
 {
+    "name": "dev-container-features",
     "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
     "customizations": {
         "vscode": {

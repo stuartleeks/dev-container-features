@@ -12,8 +12,7 @@ jobs:
     strategy:
       matrix:
         features: [
-           "color",
-           "hello"
+           "bash-completion"
         ]
         baseImage:
           [
@@ -28,14 +27,14 @@ jobs:
       - name: "Generating tests for '${{ matrix.features }}' against '${{ matrix.baseImage }}'"
         run: devcontainer features test -f ${{ matrix.features }} -i ${{ matrix.baseImage }} .
 
-  test-global:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    steps:
-      - uses: actions/checkout@v2
+  # test-global:
+  #   runs-on: ubuntu-latest
+  #   continue-on-error: true
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: "Install latest devcontainer CLI"
-        run: npm install -g @devcontainers/cli
+  #     - name: "Install latest devcontainer CLI"
+  #       run: npm install -g @devcontainers/cli
 
-      - name: "Testing global scenarios"
-        run: devcontainer features test --global-scenarios-only .
+  #     - name: "Testing global scenarios"
+  #       run: devcontainer features test --global-scenarios-only .

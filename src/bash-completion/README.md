@@ -1,15 +1,13 @@
 
-# Hello, World! (hello)
+# Bash completion
 
-A hello world feature
+A feature to ensure that bash-completion is installed.
 
 ## Example Usage
 
 ```json
 "features": {
-        "ghcr.io/devcontainers/feature-template/hello:1": {
-            "version": "latest"
-        }
+        "ghcr.io/stuartleeks/feature-template/hello:1": {}
 }
 ```
 
