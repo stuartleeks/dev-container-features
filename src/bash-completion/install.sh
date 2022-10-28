@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-USERNAME=${USERNAME:-"automatic"}
+# USERNAME=${USERNAME:-"automatic"}
+USERNAME=${USERNAME:-"root"}
 
 # Determine the appropriate non-root user
 if [ "${USERNAME}" = "auto" ] || [ "${USERNAME}" = "automatic" ]; then
@@ -26,7 +27,11 @@ else
   USER_HOME=/home/${USERNAME}
 fi
 
+echo "****************************************************************"
+echo "****************************************************************"
 echo "Activating feature 'bash-completion'"
+printenv | sort
+echo "****************************************************************"
 echo "User: ${USERNAME}     User home: ${USER_HOME}"
 
 if ! shopt -oq posix; then
@@ -38,8 +43,10 @@ if ! shopt -oq posix; then
     echo -e "#bash-completion:\nsource /etc/bash_completion\n" >> "${USER_HOME}/.bashrc"
   else
     echo "bash-completion not found. Installing..."
-    apt-get update
-    apt-get install bash-completion
+    sudo apt-get update
+    sudo apt-get install bash-completion
     echo -e "#bash-completion:\nsource /usr/share/bash-completion/bash_completion\n" >> "${USER_HOME}/.bashrc"
   fi
 fi
+
+echo "****************************************************************"

@@ -4,4 +4,5 @@ help: ## show this help
 	| column -t -s '|'
 
 test-bash-completion: ## test the bash-completion feature
-	devcontainer features test -f bash-completion -i mcr.microsoft.com/devcontainers/base:ubuntu .
+	# devcontainer features test --remote-user vscode --skip-scenarios -f bash-completion -i mcr.microsoft.com/devcontainers/base:ubuntu .
+	devcontainer features test --skip-scenarios -f bash-completion -i mcr.microsoft.com/devcontainers/base:ubuntu .
