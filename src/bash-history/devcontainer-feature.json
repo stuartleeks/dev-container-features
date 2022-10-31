@@ -1,0 +1,14 @@
+{
+    "name": "Bash History",
+    "id": "bash-history",
+    "version": "0.0.1",
+    "description": "Preserve bash history across dev container instances",
+    "options": {},
+    "mounts": [
+        {
+            "source": "${devcontainerId}-bashhistory",
+            "target": "/dc/bashhistory",
+            "type": "volume"
+        }
+    ]
+}
