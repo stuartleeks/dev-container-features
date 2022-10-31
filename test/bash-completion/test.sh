@@ -30,7 +30,14 @@ source dev-container-features-test-lib
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
-check "completion installed" type -t _get_comp_words_by_ref | grep 'function'
+# cat ~/.bashrc
+echo "***"
+# whoami
+# source ~/.bashrc
+# echo "pre type-echo"
+# bash --login -c 'source ~/.bashrc; echo "type-check: $(type -t _get_comp_words_by_ref)"'
+check "completion installed" bash --login -c 'source ~/.bashrc; echo "type-check: $(type -t _get_comp_words_by_ref)"' | grep 'function'
+# check "completion installed" type -t _get_comp_words_by_ref | grep 'function'
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
