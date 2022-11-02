@@ -10,5 +10,9 @@
             "target": "/dc/shellhistory",
             "type": "volume"
         }
-    ]    
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/meaningful-ooo/devcontainer-features/fish"
+    ]
 }
