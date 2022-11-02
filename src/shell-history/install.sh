@@ -22,17 +22,15 @@ fi
 cat << EOF >> "$_REMOTE_USER_HOME/.bashrc"
 export HISTFILE=/dc/shellhistory/.bash_history
 export PROMPT_COMMAND='history -a'
-sudo chown -R $_REMOTE_USER /dc/shellhistory
 EOF
-sudo chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.bashrc
+chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.bashrc
 
 # Set HISTFILE for zsh
 cat << EOF >> "$_REMOTE_USER_HOME/.zshrc"
 export HISTFILE=/dc/shellhistory/.zsh_history
 export PROMPT_COMMAND='history -a'
-sudo chown -R $_REMOTE_USER /dc/shellhistory
 EOF
-sudo chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.zshrc
+chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.zshrc
 
 # Create symlink for fish
 mkdir -p $_REMOTE_USER_HOME/.config/fish
@@ -46,6 +44,5 @@ if test -f \$history_location
     mv \$history_location "\$history_location-old"
 end
 ln -s /dc/shellhistory/fish_history \$history_location
-sudo chown -R $_REMOTE_USER \$history_location
 EOF
-sudo chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.config/
+chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.config/
