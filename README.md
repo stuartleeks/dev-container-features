@@ -8,7 +8,8 @@ I make no guarantee that features here won't break with updates etc, but I use [
 
 If you want to create your own features, see <https://github.com/devcontainers/feature-template>
 
-| Feature                                    | Description                                                   |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| [shell-history](src/shell-history/README.md) | Preserve shell history across dev container instances/rebuilds |
+| Feature                                                      | Description                                                       |
+| ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| [azure-cli-persistence](src/azure-cli-persistence/README.md) | Preserve `~/.azure` folder across instances (avoids extra logins) |
+| [shell-history](src/shell-history/README.md)                 | Preserve shell history across dev container instances/rebuilds    |
 
