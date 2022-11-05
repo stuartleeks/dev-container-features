@@ -20,6 +20,9 @@ fi
 
 # Set HISTFILE for bash
 cat << EOF >> "$_REMOTE_USER_HOME/.bashrc"
+if [[ -z "\$HISTFILE_OLD" ]]; then
+    export HISTFILE_OLD=\$HISTFILE
+fi
 export HISTFILE=/dc/shellhistory/.bash_history
 export PROMPT_COMMAND='history -a'
 sudo chown -R $_REMOTE_USER /dc/shellhistory
