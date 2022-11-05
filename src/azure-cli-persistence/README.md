@@ -1,13 +1,13 @@
 
-# Shell History (shell-history)
+# Azure CLI Persistence (azure-cli-persistence)
 
-Preserve shell history across dev container instances. Currently supports bash, zsh, and fish
+Preserve ~/.azure folder across container instances (avoids needing to login after rebuilding)
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {
+    "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {
         "version": "latest"
     }
 }
@@ -24,9 +24,8 @@ Preserve shell history across dev container instances. Currently supports bash, 
 
 | Version | Notes                                                               |
 | ------- | ------------------------------------------------------------------- |
-| 0.0.2   | Initial work to reduce the requirement on `sudo` in `shell-history` |
 | 0.0.1   | Initial version                                                     |
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/shell-history/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/azure-cli-persistence/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
