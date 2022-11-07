@@ -11,6 +11,11 @@ if [  -z "$_REMOTE_USER" ] || [ -z "$_REMOTE_USER_HOME" ]; then
   exit 1
 fi
 
+if [[ -f "$_REMOTE_USER_HOME/.azure" ]]; then
+  echo "Moving existing .azure folder to .azure-old"
+  mv "$_REMOTE_USER_HOME/.azure" "$_REMOTE_USER_HOME/.azure-old"
+fi
+
 ln -s /dc/azure/ "$_REMOTE_USER_HOME/.azure"
 chown -R "${_REMOTE_USER}:${_REMOTE_USER}" "$_REMOTE_USER_HOME/.azure"
 
