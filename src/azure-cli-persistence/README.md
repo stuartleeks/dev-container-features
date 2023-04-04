@@ -7,9 +7,7 @@ Preserve ~/.azure folder across container instances (avoids needing to login aft
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {}
 }
 ```
 
@@ -24,6 +22,7 @@ Preserve ~/.azure folder across container instances (avoids needing to login aft
 
 | Version | Notes                                                        |
 | ------- | ------------------------------------------------------------ |
+| 0.0.4   | Fix test for existing ~/.azure folder                        |
 | 0.0.3   | Rename existing ~/.azure folder to ~/.azure-old if it exists |
 | 0.0.1   | Initial version                                              |
 

@@ -7,9 +7,7 @@ Preserve shell history across dev container instances. Currently supports bash, 
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
 }
 ```
 
