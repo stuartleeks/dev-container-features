@@ -25,7 +25,6 @@ if [[ -z "\$HISTFILE_OLD" ]]; then
 fi
 export HISTFILE=/dc/shellhistory/.bash_history
 export PROMPT_COMMAND='history -a'
-sudo chown -R $_REMOTE_USER /dc/shellhistory
 EOF
 chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.bashrc
 
@@ -33,7 +32,6 @@ chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.bashrc
 cat << EOF >> "$_REMOTE_USER_HOME/.zshrc"
 export HISTFILE=/dc/shellhistory/.zsh_history
 export PROMPT_COMMAND='history -a'
-sudo chown -R $_REMOTE_USER /dc/shellhistory
 EOF
 chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.zshrc
 
@@ -49,6 +47,8 @@ if test -f \$history_location
     mv \$history_location "\$history_location-old"
 end
 ln -s /dc/shellhistory/fish_history \$history_location
-sudo chown -R $_REMOTE_USER \$history_location
 EOF
 chown -R $_REMOTE_USER $_REMOTE_USER_HOME/.config/
+
+mkdir -p /dc/shellhistory
+chown -R $_REMOTE_USER /dc/shellhistory
