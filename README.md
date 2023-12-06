@@ -11,5 +11,6 @@ If you want to create your own features, see <https://github.com/devcontainers/f
 | Feature                                                      | Description                                                       |
 | ------------------------------------------------------------ | ----------------------------------------------------------------- |
 | [azure-cli-persistence](src/azure-cli-persistence/README.md) | Preserve `~/.azure` folder across instances (avoids extra logins) |
+| [dev-tunnels](src/dev-tunnels/README.md)                     | Set up the `devtunnel` CLI for working with Dev Tunnels           |
 | [shell-history](src/shell-history/README.md)                 | Preserve shell history across dev container instances/rebuilds    |
 
