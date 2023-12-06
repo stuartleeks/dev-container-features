@@ -1,0 +1,15 @@
+{
+    "name": "Dev Tunnels",
+    "id": "dev-tunnels",
+    "version": "0.0.1",
+    "description": "Set up the `devtunnel` CLI for working with [Dev Tunnels](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview)",
+    "options": {},
+    // TODO - once devtunnel supports writing auth to HOME dir, set up a mount and symlink to persist login across dev container rebuilds
+    // "mounts": [
+    //     {
+    //         "source": "${devcontainerId}-devtunnels",
+    //         "target": "/dc/devtunnels",
+    //         "type": "volume"
+    //     }
+    // ]
+}
