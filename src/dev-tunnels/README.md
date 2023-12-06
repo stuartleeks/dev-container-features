@@ -7,9 +7,7 @@ Set up the `devtunnel` CLI for working with [Dev Tunnels](https://learn.microsof
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/dev-tunnels:0": {
-        "version": "latest"
-    }
+    "ghcr.io/stuartleeks/dev-container-features/dev-tunnels:0": {}
 }
 ```
 
