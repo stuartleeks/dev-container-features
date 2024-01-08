@@ -8,24 +8,25 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    # continue-on-error: true
     strategy:
       matrix:
-        features: [
-           "bash-completion"
-        ]
-        baseImage:
-          [
-            "mcr.microsoft.com/devcontainers/base:ubuntu"
-          ]
+        include:
+          - features: "dev-tunnel"
+            baseImage: "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18"
+            remoteUser: node
+          - features: "dev-tunnel"
+            baseImage: "mcr.microsoft.com/devcontainers/base:ubuntu"
+            remoteUser: root
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
 
-      - name: "Generating tests for '${{ matrix.features }}' against '${{ matrix.baseImage }}'"
-        run: devcontainer features test -f ${{ matrix.features }} -i ${{ matrix.baseImage }} .
+      - name: "Generating tests for '${{ matrix.feature }}' against '${{ matrix.baseImage }}'"
+        run: devcontainer features test --features ${{ matrix.feature }} --base-image ${{ matrix.baseImage }} --remote-user ${{ matrix.remoteUser }} .
+
 
   # test-global:
   #   runs-on: ubuntu-latest

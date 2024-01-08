@@ -1,13 +1,13 @@
 
-# Shell History (shell-history)
+# Dev Tunnels (dev-tunnels)
 
-Preserve shell history across dev container instances. Currently supports bash, zsh, and fish
+Set up the `devtunnel` CLI for working with [Dev Tunnels](https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview)
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    "ghcr.io/stuartleeks/dev-container-features/dev-tunnels:0": {}
 }
 ```
 
@@ -28,4 +28,4 @@ Preserve shell history across dev container instances. Currently supports bash, 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/shell-history/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/dev-tunnels/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
