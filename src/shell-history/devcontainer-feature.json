@@ -14,5 +14,8 @@
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils",
         "ghcr.io/meaningful-ooo/devcontainer-features/fish"
-    ]
+    ],
+    "onCreateCommand": {
+        "shell-history": "/usr/local/share/stuartleeks-devcontainer-features/shell-history/scripts/oncreate.sh"
+    }
 }
