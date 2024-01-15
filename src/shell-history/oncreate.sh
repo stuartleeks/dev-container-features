@@ -2,6 +2,19 @@
 
 set -e
 
+fix_permissions() {
+    local dir
+    dir="${1}"
+
+    if [ ! -w "${dir}" ]; then
+        echo "Fixing permissions of '${dir}'..."
+        sudo chown -R "$(id -u):$(id -g)" "${dir}"
+        echo "Done!"
+    else
+        echo "Permissions of '${dir}' are OK!"
+    fi
+}
+
 # Generally, the installation favours configuring a shell to use the mounted volume
 # for storing history rather than symlinking as any operation to recreate files 
 # could delete the symlink. 
@@ -16,13 +29,13 @@ if [ "$SHELL" = "/bin/bash" ]; then
     fi
     export HISTFILE=/dc/shellhistory/.bash_history
     export PROMPT_COMMAND='history -a'
-    chown -R "$(id -u):$(id -g)" /dc/shellhistory
+    fix_permissions /dc/shellhistory
 
 elif [ "$SHELL" = "/bin/zsh" ]; then
 
     export HISTFILE=/dc/shellhistory/.zsh_history
     export PROMPT_COMMAND='history -a'
-    chown -R "$(id -u):$(id -g)" /dc/shellhistory
+    fix_permissions /dc/shellhistory
 
 elif [ "$SHELL" = "/usr/bin/fish" ]; then
 
@@ -38,5 +51,5 @@ elif [ "$SHELL" = "/usr/bin/fish" ]; then
     fi 
 
     ln -s /dc/shellhistory/fish_history $history_location
-    chown -R "$(id -u):$(id -g)" $history_location
+    fix_permissions $history_location
 fi
