@@ -13,5 +13,8 @@
     ],
     "installsAfter": [
         "ghcr.io/devcontainers/features/azure-cli"
-    ]
+    ],
+    "onCreateCommand": {
+        "azure-cli-persistence": "/usr/local/share/stuartleeks-devcontainer-features/azure-cli-persistence/scripts/oncreate.sh"
+    }
 }
