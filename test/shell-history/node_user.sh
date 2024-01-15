@@ -4,5 +4,3 @@ set -e
 
 ./_default.sh
 
-# Report result
-reportResults
