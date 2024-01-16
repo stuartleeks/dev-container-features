@@ -1,7 +1,7 @@
 {
     "name": "Shell History",
     "id": "shell-history",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Preserve shell history across dev container instances. Currently supports bash, zsh, and fish",
     "options": {},
     "mounts": [
