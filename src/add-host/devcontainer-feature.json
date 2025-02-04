@@ -1,0 +1,20 @@
+{
+  "id": "add-host",
+  "version": "1.0.0",
+  "name": "Add Host",
+  "description": "Add a hosts file entry in the dev container.",
+  "documentationURL": "https://github.com/devcontainers/features/tree/main/src/add-host",
+  "options": {
+    "host_name": {
+      "type": "string",
+      "default": "host.docker.internal",
+      "description": "Host name to add to the container's hosts file"
+    },
+    "host_ip": {
+      "type": "string",
+      "default": "",
+      "description": "The IP Address to associate with the host name"
+    }
+  },
+  "postStartCommand": "date >> /home/vscode/foo && echo \"postStart\" >> /home/vscode/foo && sudo cp /etc/hosts /etc/hosts_old && cat /etc/hosts_old | sed '/host.docker.internal$/d' > /tmp/hosts && cat /etc/hosts_temp | tee -a /tmp/hosts > /dev/null && sudo cp /tmp/hosts /etc/hosts",
+}
