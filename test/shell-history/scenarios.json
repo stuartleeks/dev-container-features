@@ -1,0 +1,31 @@
+{
+    "node_user": {
+        "image": "mcr.microsoft.com/devcontainers/javascript-node:1-18",
+        "features": {
+            "shell-history": {}
+        }
+    },
+    "zsh_shell": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "ghcr.io/devcontainers/features/common-utils:2": {
+                "configureZshAsDefaultShell": true
+            },
+            "shell-history": {}
+        }
+    },
+    "fish_shell": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {},
+            "shell-history": {}
+        }
+    },
+    "root_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "shell-history": {}
+        },
+        "remoteUser": "root"
+    }
+}
