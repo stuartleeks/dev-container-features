@@ -1,0 +1,17 @@
+{
+    "name": "Azure CLI Persistence",
+    "id": "azure-cli-persistence",
+    "version": "0.0.3",
+    "description": "Preserve ~/.azure folder across container instances (avoids needing to login after rebuilding)",
+    "options": {},
+    "mounts": [
+        {
+            "source": "${devcontainerId}-azure",
+            "target": "/dc/azure",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/azure-cli"
+    ]
+}
