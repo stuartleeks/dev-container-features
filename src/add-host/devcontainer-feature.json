@@ -1,6 +1,6 @@
 {
   "id": "add-host",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "Add Host",
   "description": "Add a hosts file entry in the dev container.",
   "documentationURL": "https://github.com/devcontainers/features/tree/main/src/add-host",
