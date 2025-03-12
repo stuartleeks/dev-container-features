@@ -22,38 +22,39 @@ fix_permissions() {
 
 echo "Activating feature 'shell-history'"
 echo "User: $(id -un)"
+echo "User home: $HOME"
 
 
 # Set HISTFILE for bash
-cat << EOF >> "$_REMOTE_USER_HOME/.bashrc"
-if [[ -z "$HISTFILE_OLD" ]]; then
-    export HISTFILE_OLD=$HISTFILE
+cat << EOF >> "$HOME/.bashrc"
+if [[ -z "\$HISTFILE_OLD" ]]; then
+    export HISTFILE_OLD=\$HISTFILE
 fi
 export HISTFILE=/dc/shellhistory/.bash_history
 export PROMPT_COMMAND='history -a'
 EOF
 
 # Set HISTFILE for zsh
-cat << EOF >> "$_REMOTE_USER_HOME/.zshrc"
+cat << EOF >> "$HOME/.zshrc"
 export HISTFILE=/dc/shellhistory/.zsh_history
 export PROMPT_COMMAND='history -a'
 EOF
 
 # Create symlink for fish
-mkdir -p $_REMOTE_USER_HOME/.config/fish
-cat << EOF >> "$_REMOTE_USER_HOME/.config/fish/config.fish"
-if [ -z "$XDG_DATA_HOME" ];
+mkdir -p $HOME/.config/fish
+cat << EOF >> "$HOME/.config/fish/config.fish"
+if [ -z "\$XDG_DATA_HOME" ];
 then
     set history_location ~/.local/share/fish/fish_history
 else
-    set history_location $XDG_DATA_HOME/fish/fish_history
+    set history_location \$XDG_DATA_HOME/fish/fish_history
 fi
 
-if [ -f $history_location ]; then
-    mv $history_location "$history_location-old"
+if [ -f \$history_location ]; then
+    mv \$history_location "\$history_location-old"
 fi
 
-ln -s /dc/shellhistory/fish_history $history_location
+ln -s /dc/shellhistory/fish_history \$history_location
 EOF
 
 fix_permissions /dc/shellhistory
