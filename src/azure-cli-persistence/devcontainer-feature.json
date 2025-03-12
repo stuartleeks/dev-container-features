@@ -1,7 +1,7 @@
 {
     "name": "Azure CLI Persistence",
     "id": "azure-cli-persistence",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Preserve ~/.azure folder across container instances (avoids needing to login after rebuilding)",
     "options": {},
     "mounts": [
@@ -13,5 +13,8 @@
     ],
     "installsAfter": [
         "ghcr.io/devcontainers/features/azure-cli"
-    ]
+    ],
+    "onCreateCommand": {
+        "azure-cli-persistence": "/usr/local/share/stuartleeks-devcontainer-features/azure-cli-persistence/scripts/oncreate.sh"
+    }
 }
