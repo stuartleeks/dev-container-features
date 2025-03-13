@@ -1,6 +1,6 @@
 {
   "id": "add-host",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "Add Host",
   "description": "Add a hosts file entry in the dev container.",
   "documentationURL": "https://github.com/devcontainers/features/tree/main/src/add-host",
@@ -16,5 +16,7 @@
       "description": "The IP Address to associate with the host name"
     }
   },
-  "postStartCommand": "sudo cp /etc/hosts /etc/hosts_old && cat /etc/hosts_old | sed '/host.docker.internal$/d' > /tmp/hosts && cat /etc/hosts_temp | tee -a /tmp/hosts > /dev/null && sudo cp /tmp/hosts /etc/hosts"
+  "postStartCommand": {
+    "azure-cli-persistence": "/usr/local/share/stuartleeks-devcontainer-features/add-host/scripts/poststart.sh"
+  }
 }
