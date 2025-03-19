@@ -17,7 +17,7 @@
     "fish_shell": {
         "image": "mcr.microsoft.com/devcontainers/base:debian",
         "features": {
-            "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {},
+            "ghcr.io/meaningful-ooo/devcontainer-features/fish:latest": {},
             "shell-history": {}
         }
     },
