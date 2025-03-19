@@ -18,6 +18,9 @@ jobs:
           - features: "dev-tunnel"
             baseImage: "mcr.microsoft.com/devcontainers/base:ubuntu"
             remoteUser: root
+          - features: shell-history
+            baseImage: mcr.microsoft.com/devcontainers/base:ubuntu
+            remoteUser: vscode
     steps:
       - uses: actions/checkout@v3
 
