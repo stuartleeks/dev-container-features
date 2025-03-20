@@ -42,7 +42,7 @@ EOF
 
 # Create symlink for fish
 mkdir -p $HOME/.config/fish
-cat << "EOF" >> "$HOME/.config/fish/config.fish"
+cat << 'EOF' >> "$HOME/.config/fish/config.fish"
 if [ -z "$XDG_DATA_HOME" ];
     set history_location ~/.local/share/fish/fish_history
 else
