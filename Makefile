@@ -5,3 +5,11 @@ help: ## show this help
 
 test-bash-completion: ## test the bash-completion feature
 	devcontainer features test -f bash-completion -i mcr.microsoft.com/devcontainers/base:ubuntu .
+
+test-project-sync: ## Sync the feature code to the test project
+	rm -rf test-project/.devcontainer/src
+	cp -r src test-project/.devcontainer/src
+
+test-project-build: test-project-sync ## Build the test project
+	@echo "Building the test project..."
+	echo "" | devcontainer build --workspace-folder test-project | cat
