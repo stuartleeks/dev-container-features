@@ -22,6 +22,7 @@ Preserve ~/.azure folder across container instances (avoids needing to login aft
 
 | Version | Notes                                                        |
 | ------- | ------------------------------------------------------------ |
+| 0.0.6   | Fix fish history (@eitsupi)                                  |
 | 0.0.5   | Use lifecycle scripts                                        |
 | 0.0.4   | Fix test for existing ~/.azure folder                        |
 | 0.0.3   | Rename existing ~/.azure folder to ~/.azure-old if it exists |
