@@ -22,6 +22,7 @@ Preserve shell history across dev container instances. Currently supports bash, 
 
 | Version | Notes                                                               |
 | ------- | ------------------------------------------------------------------- |
+| 0.0.6   | Fix fish history (@eitsupi)                                         |
 | 0.0.5   | Revert to updating .bashrc etc to set HISTFILE env var              |
 | 0.0.4   | Use lifecycle scripts                                               |
 | 0.0.3   | Set `HISTFILE_OLD` when replacing a previous `HSITFILE` value       |
