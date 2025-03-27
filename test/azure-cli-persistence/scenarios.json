@@ -1,0 +1,19 @@
+{
+    "with_extensions": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "ghcr.io/devcontainers/features/azure-cli:1": {
+                "extensions": "containerapp,ssh"
+            },
+            "azure-cli-persistence": {}
+        }
+    },
+    "root_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "ghcr.io/devcontainers/features/azure-cli:1": {},
+            "azure-cli-persistence": {}
+        },
+        "remoteUser": "root"
+    }
+}

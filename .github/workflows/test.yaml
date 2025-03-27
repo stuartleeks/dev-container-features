@@ -33,7 +33,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - dev-tunnels
+          - azure-cli-persistence
           - shell-history
     steps:
       - uses: actions/checkout@v4
