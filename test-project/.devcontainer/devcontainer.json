@@ -14,6 +14,9 @@
 			// "extensions": "containerapp,ssh"
 		},
 		"ghcr.io/devcontainers-extra/features/fish-apt-get": {},
+		"ghcr.io/devcontainers/features/azure-cli:1": {
+			"extensions": "containerapp,ssh"
+		},
 		"./src/shell-history": {},
 		"./src/azure-cli-persistence": {}
 	}
