@@ -18,6 +18,7 @@
 			"extensions": "containerapp,ssh"
 		},
 		"./src/shell-history": {},
-		"./src/azure-cli-persistence": {}
+		"./src/azure-cli-persistence": {},
+		"./src/dev-tunnels" : {}
 	}
 }

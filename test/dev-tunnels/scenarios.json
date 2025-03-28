@@ -1,0 +1,8 @@
+{
+    "base": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "dev-tunnels": {}
+        }
+    }
+}

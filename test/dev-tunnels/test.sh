@@ -43,7 +43,11 @@ source dev-container-features-test-lib
 
 # NOTE: currently have to run the test using zsh as the devtunnel install script only adds the PATH to the first shell config it finds
 #       and when running as root in the dev container base image used for testing, that is .zshrc
-check "Check devtunnel is installed" zsh --interactive -c "devtunnel --version" | grep 'Tunnel CLI'
+# check "Check devtunnel is installed" zsh --interactive -c "devtunnel --version" | grep 'Tunnel CLI'
+
+devtunnel --version
+
+check "Check devtunnel is installed" bash -c "devtunnel --version" | grep 'Tunnel CLI'
 
 # Report result
 # If any of the checks above exited with a non-zero exit code, the test will fail.
