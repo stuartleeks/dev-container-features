@@ -17,4 +17,4 @@ test-project-build: test-project-sync ## Build the test project
 	echo "" | devcontainer build --workspace-folder test-project | cat
 
 test:
-	devcontainer features test
+	devcontainer features test --base-image mcr.microsoft.com/devcontainers/base:ubuntu
