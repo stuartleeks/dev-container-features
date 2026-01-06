@@ -22,6 +22,7 @@ Preserve ~/.azure folder across container instances (avoids needing to login aft
 
 | Version | Notes                                                        |
 | ------- | ------------------------------------------------------------ |
+| 0.0.8   | Add logic to merge extensions when the extensions folder already exists in both old and new .azure folders |
 | 0.0.7   | Add marker files to prevent double installation when a feature is [always installed](https://code.visualstudio.com/docs/devcontainers/containers#_always-installed-features) and in a devcontainer.json file. |
 | 0.0.6   | Add symlink for cliextensions folder                         |
 | 0.0.5   | Use lifecycle scripts                                        |

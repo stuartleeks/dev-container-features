@@ -28,6 +28,8 @@ if [ -e "$_REMOTE_USER_HOME/.azure" ]; then
   log "Moving existing .azure folder to .azure-old"
   mv "$_REMOTE_USER_HOME/.azure" "$_REMOTE_USER_HOME/.azure-old"
   got_old_azure_folder=true
+else
+  log "No existing .azure folder found at '$_REMOTE_USER_HOME/.azure'"
 fi
 
 ln -s /dc/azure/ "$_REMOTE_USER_HOME/.azure"

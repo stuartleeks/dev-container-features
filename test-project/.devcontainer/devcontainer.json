@@ -10,12 +10,10 @@
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {
-		"ghcr.io/devcontainers/features/azure-cli": {
-			// "extensions": "containerapp,ssh"
-		},
 		// "ghcr.io/devcontainers-extra/features/fish-apt-get": {},
 		"ghcr.io/devcontainers/features/azure-cli:1": {
 			// "extensions": "containerapp,ssh"
+			"extensions": "ssh"
 		},
 		"./src/shell-history": {},
 		"./src/azure-cli-persistence": {},

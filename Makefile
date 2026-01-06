@@ -18,3 +18,6 @@ test-project-build: test-project-sync ## Build the test project
 
 test:
 	devcontainer features test --base-image mcr.microsoft.com/devcontainers/base:ubuntu
+
+test-azure-cli-persistence:
+	devcontainer features test --features azure-cli-persistence --base-image mcr.microsoft.com/devcontainers/base:ubuntu
