@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ubuntu
 {
-	"name": "devcontainer-features-playground-test1",
+	"name": "devcontainer-features-testproject",
 	"image": "mcr.microsoft.com/vscode/devcontainers/base:0-jammy",
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -13,12 +13,12 @@
 		"ghcr.io/devcontainers/features/azure-cli": {
 			// "extensions": "containerapp,ssh"
 		},
-		"ghcr.io/devcontainers-extra/features/fish-apt-get": {},
+		// "ghcr.io/devcontainers-extra/features/fish-apt-get": {},
 		"ghcr.io/devcontainers/features/azure-cli:1": {
-			"extensions": "containerapp,ssh"
+			// "extensions": "containerapp,ssh"
 		},
 		"./src/shell-history": {},
 		"./src/azure-cli-persistence": {},
-		"./src/dev-tunnels" : {}
+		// "./src/dev-tunnels" : {}
 	}
 }

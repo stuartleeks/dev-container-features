@@ -17,6 +17,12 @@ log() {
 log "Activating feature 'azure-cli-persistence'"
 log "User: ${_REMOTE_USER}     User home: ${_REMOTE_USER_HOME}"
 
+# check if marker file exists to avoid re-running oncreate script actions
+if [ -f "$_REMOTE_USER_HOME/.stuartleeks/azure-cli-persistence-install" ]; then
+  log "Feature 'azure-cli-persistence' already installed, skipping oncreate actions"
+  exit 0
+fi
+
 got_old_azure_folder=false
 if [ -e "$_REMOTE_USER_HOME/.azure" ]; then
   log "Moving existing .azure folder to .azure-old"
@@ -31,3 +37,7 @@ if [ -f oncreate.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
     cp oncreate.sh "${LIFECYCLE_SCRIPTS_DIR}/oncreate.sh"
 fi
+
+log "Adding marker file to indicate persistence is installed"
+mkdir -p "$_REMOTE_USER_HOME/.stuartleeks"
+touch "$_REMOTE_USER_HOME/.stuartleeks/azure-cli-persistence-install"

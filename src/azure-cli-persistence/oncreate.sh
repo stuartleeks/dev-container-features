@@ -17,22 +17,12 @@ else
 fi
 
 log "In OnCreate script"
-
-FEATURE_DIR="/usr/local/share/stuartleeks-devcontainer-features/azure-cli-persistence"
-LOG_FILE="$FEATURE_DIR/log.txt"
-
-log() {
-  echo "$1"
-  echo "$1" >> "$LOG_FILE"
-}
-
-if command -v sudo > /dev/null; then
-  sudo chown -R "$(id -u):$(id -g)" "$LOG_FILE"
-else
-  chown -R "$(id -u):$(id -g)" "$LOG_FILE"
+# check if marker file exists to avoid re-running oncreate script actions
+if [ -f "$HOME/.stuartleeks/azure-cli-persistence-oncreate" ]; then
+  log "Feature 'azure-cli-persistence' oncreate actions already run, skipping"
+  exit 0
 fi
 
-log "In OnCreate script"
 
 fix_permissions() {
     local dir
@@ -92,7 +82,7 @@ else
   # If we haven't got an old .azure folder with a cliextensions folder in it, check if the new cliextensions folder is a symlink to the old one
   # And if so, remove the symlink
   # This can happen if the user has installed the azure-cli feature and specified extensions to install
-  # and then later removed the extensions.
+  # and then later removed the extensions.cd
   if [ -L "$new_cliextensions_folder" ]; then
     symlink_target=$(readlink "$new_cliextensions_folder")
     if [ "$symlink_target" = "$old_cliextensions_folder" ]; then
@@ -100,4 +90,13 @@ else
       rm "$new_cliextensions_folder"
     fi
   fi
+fi
+
+
+log "Adding marker file to indicate oncreate actions have been run"
+mkdir -p "$HOME/.stuartleeks"
+if command -v sudo > /dev/null; then
+  sudo touch "$HOME/.stuartleeks/azure-cli-persistence-oncreate"
+else
+  touch "$HOME/.stuartleeks/azure-cli-persistence-oncreate"
 fi
