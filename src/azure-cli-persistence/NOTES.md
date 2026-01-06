@@ -3,7 +3,7 @@
 
 | Version | Notes                                                        |
 | ------- | ------------------------------------------------------------ |
-| 0.0.7   | Add marker files to prevent double installation when a feature is [https://code.visualstudio.com/docs/devcontainers/containers#_always-installed-features](always installed) and in a devcontainer.json file. |
+| 0.0.7   | Add marker files to prevent double installation when a feature is [always installed](https://code.visualstudio.com/docs/devcontainers/containers#_always-installed-features) and in a devcontainer.json file. |
 | 0.0.6   | Add symlink for cliextensions folder                         |
 | 0.0.5   | Use lifecycle scripts                                        |
 | 0.0.4   | Fix test for existing ~/.azure folder                        |
