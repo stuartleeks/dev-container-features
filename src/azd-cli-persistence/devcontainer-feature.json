@@ -1,0 +1,20 @@
+{
+    "name": "Azure Developer CLI Persistence (azd)",
+    "id": "azd-cli-persistence",
+    "version": "0.0.1",
+    "description": "Configure Azure Dev CLI (azd) to store configuration in a mounted volume to preserve across container builds",
+    "options": {},
+    "mounts": [
+        {
+            "source": "${devcontainerId}-azure-dev",
+            "target": "/dc/azure-dev",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/azure/azure-dev/azd"
+    ],
+    "onCreateCommand": {
+        "azd-cli-persistence": "/usr/local/share/stuartleeks-devcontainer-features/azd-cli-persistence/scripts/oncreate.sh"
+    }
+}

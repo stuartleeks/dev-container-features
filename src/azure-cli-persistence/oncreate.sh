@@ -31,7 +31,7 @@ fi
 
 log "In OnCreate script"
 # check if marker file exists to avoid re-running oncreate script actions
-if [ -f "$HOME/.stuartleeks/azure-cli-persistence-oncreate" ]; then
+if [ -f "$FEATURE_DIR/markers/oncreate" ]; then
   log "Feature 'azure-cli-persistence' oncreate actions already run, skipping"
   exit 0
 fi
@@ -54,11 +54,11 @@ fix_permissions "/dc/azure"
 
 add_marker() {
   log "Adding marker file to indicate oncreate actions have been run"
-  mkdir -p "$HOME/.stuartleeks"
+  mkdir -p "$FEATURE_DIR/markers"
   if command -v sudo > /dev/null; then
-    sudo touch "$HOME/.stuartleeks/azure-cli-persistence-oncreate"
+    sudo touch "$FEATURE_DIR/markers/oncreate"
   else
-    touch "$HOME/.stuartleeks/azure-cli-persistence-oncreate"
+    touch "$FEATURE_DIR/markers/oncreate"
   fi
 }
 

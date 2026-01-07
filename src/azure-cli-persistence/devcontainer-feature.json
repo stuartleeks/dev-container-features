@@ -1,7 +1,7 @@
 {
     "name": "Azure CLI Persistence",
     "id": "azure-cli-persistence",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "Preserve ~/.azure folder across container instances (avoids needing to re-login after rebuilding)",
     "options": {},
     "mounts": [
