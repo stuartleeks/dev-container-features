@@ -1,5 +1,5 @@
 
-# Azure Dev CLI Persistence (azd-cli-persistence)
+# Azure Developer CLI Persistence (azd) (azd-cli-persistence)
 
 Configure Azure Dev CLI (azd) to store configuration in a mounted volume to preserve across container builds
 
@@ -26,4 +26,4 @@ Configure Azure Dev CLI (azd) to store configuration in a mounted volume to pres
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/azure-cli-persistence/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/azd-cli-persistence/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
