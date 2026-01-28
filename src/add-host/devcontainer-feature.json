@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "name": "Add Host",
   "description": "Add a hosts file entry in the dev container.",
-  "documentationURL": "https://github.com/devcontainers/features/tree/main/src/add-host",
+  "documentationURL": "https://github.com/stuartleeks/dev-container-features/tree/main/src/add-host",
   "options": {
     "host_name": {
       "type": "string",
