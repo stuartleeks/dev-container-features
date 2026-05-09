@@ -5,7 +5,10 @@
         "vscode": {
             "extensions": [
                 "mads-hartmann.bash-ide-vscode"
-            ]
+            ],
+            "settings": {
+                "dev.containers.mountWaylandSocket": false
+            }
         }
     },
     "features": {
