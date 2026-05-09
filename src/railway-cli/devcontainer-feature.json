@@ -1,0 +1,17 @@
+{
+    "name": "Railway CLI",
+    "id": "railway-cli",
+    "version": "0.0.1",
+    "description": "Set up the `railway` CLI for working with [Railway](https://railway.com/)",
+    "options": {},
+    "mounts": [
+        {
+            "source": "${devcontainerId}-railway-cli",
+            "target": "/dc/railway-cli",
+            "type": "volume"
+        }
+    ],
+    "onCreateCommand": {
+        "railway-cli": "/usr/local/share/stuartleeks-devcontainer-features/railway-cli/scripts/oncreate.sh"
+    }
+}
