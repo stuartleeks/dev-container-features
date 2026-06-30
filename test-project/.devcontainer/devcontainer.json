@@ -9,6 +9,13 @@
 	// "postCreateCommand": "uname -a",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"dev.containers.mountWaylandSocket": false
+			}
+		}
+	},
 	"features": {
 		// "ghcr.io/devcontainers-extra/features/fish-apt-get": {},
 		// "ghcr.io/devcontainers/features/azure-cli:1": {
@@ -17,8 +24,9 @@
 		// },
 		"./src/shell-history": {},
 		// "./src/azure-cli-persistence": {},
-		"ghcr.io/azure/azure-dev/azd:0": {},
-		"./src/azd-cli-persistence": {},
+		// "ghcr.io/azure/azure-dev/azd:0": {},
+		// "./src/azd-cli-persistence": {},
 		// "./src/dev-tunnels" : {}
+		"./src/railway-cli": {}
 	}
 }
