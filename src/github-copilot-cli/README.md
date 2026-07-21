@@ -1,7 +1,7 @@
 
-# GitHub CLI (with persistence) (github-copilot-cli)
+# GitHub Copilot CLI (with persistence) (github-copilot-cli)
 
-Install GitHub CLI and configure it to store configuration in a mounted volume to preserve across container builds
+Install GitHub Copilot CLI and configure it to store configuration in a mounted volume to preserve across container builds
 
 ## Example Usage
 
@@ -22,6 +22,7 @@ Install GitHub CLI and configure it to store configuration in a mounted volume t
 
 | Version | Notes                                                        |
 | ------- | ------------------------------------------------------------ |
+| 0.0.2   | Fix description                                              |
 | 0.0.1   | Initial version                                              |
 
 ---
