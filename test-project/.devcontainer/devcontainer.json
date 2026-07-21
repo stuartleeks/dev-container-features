@@ -20,5 +20,7 @@
 		"ghcr.io/azure/azure-dev/azd:0": {},
 		"./src/azd-cli-persistence": {},
 		// "./src/dev-tunnels" : {}
+		// "./src/railway-cli": {}
+		"./src/github-copilot-cli": {}
 	}
 }

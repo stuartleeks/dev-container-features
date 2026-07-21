@@ -8,11 +8,12 @@ I make no guarantee that features here won't break with updates etc, but I use [
 
 If you want to create your own features, see <https://github.com/devcontainers/feature-template>
 
-| Feature                                                      | Description                                                       |
-| ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| [azure-cli-persistence](src/azure-cli-persistence/README.md) | Preserve `~/.azure` folder across instances (avoids extra logins) |
-| [add-host](src/add-host/README.md)                           | Add a host name/ip to the dev container hosts file                |
-| [dev-tunnels](src/dev-tunnels/README.md)                     | Set up the `devtunnel` CLI for working with Dev Tunnels           |
-| [railway-cli](src/railway-cli/README.md)                     | Set up the `railway` CLI for working with [Railway](https://railway.com) projects        |
-| [shell-history](src/shell-history/README.md)                 | Preserve shell history across dev container instances/rebuilds    |
+| Feature                                                      | Description                                                                                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| [azure-cli-persistence](src/azure-cli-persistence/README.md) | Preserve `~/.azure` folder across instances (avoids extra logins)                                                         |
+| [add-host](src/add-host/README.md)                           | Add a host name/ip to the dev container hosts file                                                                        |
+| [dev-tunnels](src/dev-tunnels/README.md)                     | Set up the `devtunnel` CLI for working with Dev Tunnels                                                                   |
+| [github-copilot-cli](src/github-copilot-cli/README.md)       | Set up the `GitHub Copilot` CLI for working with [GitHub Copilot](https://github.com/features/copilot) and persist config |
+| [railway-cli](src/railway-cli/README.md)                     | Set up the `railway` CLI for working with [Railway](https://railway.com) projects                                         |
+| [shell-history](src/shell-history/README.md)                 | Preserve shell history across dev container instances/rebuilds                                                            |
 
