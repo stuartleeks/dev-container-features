@@ -1,14 +1,14 @@
 
-# GitHub Copilot CLI (github-copilot-cli)
+# GitHub CLI (with persistence) (github-copilot-cli)
 
-Set up the `GitHub Copilot` CLI for working with [GitHub Copilot](https://github.com/features/copilot) and persist configuration across container instances.
+Install GitHub CLI and configure it to store configuration in a mounted volume to preserve across container builds
 
 ## Example Usage
 
 ```json
- "features": {
-     "ghcr.io/stuartleeks/dev-container-features/github-copilot-cli:0": {}
- }
+"features": {
+    "ghcr.io/stuartleeks/dev-container-features/github-copilot-cli:0": {}
+}
 ```
 
 ## Options
