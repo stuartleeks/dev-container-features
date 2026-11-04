@@ -1,0 +1,22 @@
+{
+    "name": "Power Platform CLI (with persistence)",
+    "id": "powerapps-cli",
+    "version": "0.0.1",
+    "description": "Install the Power Platform CLI (pac) and preserve configuration and authentication across container rebuilds",
+    "options": {},
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/dotnet:2": {
+            "version": "10.0"
+        }
+    },
+    "mounts": [
+        {
+            "source": "${devcontainerId}-powerapps-cli",
+            "target": "/dc/powerapps-cli",
+            "type": "volume"
+        }
+    ],
+    "onCreateCommand": {
+        "powerapps-cli": "/usr/local/share/stuartleeks-devcontainer-features/powerapps-cli/scripts/oncreate.sh"
+    }
+}

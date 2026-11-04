@@ -14,6 +14,6 @@ If you want to create your own features, see <https://github.com/devcontainers/f
 | [add-host](src/add-host/README.md)                           | Add a host name/ip to the dev container hosts file                                                                        |
 | [dev-tunnels](src/dev-tunnels/README.md)                     | Set up the `devtunnel` CLI for working with Dev Tunnels                                                                   |
 | [github-copilot-cli](src/github-copilot-cli/README.md)       | Set up the GitHub `copilot` CLI for working with [GitHub Copilot](https://github.com/features/copilot) and persist config |
+| [powerapps-cli](src/powerapps-cli/README.md)                 | Install the Power Platform CLI (`pac`) and persist configuration and authentication                                      |
 | [railway-cli](src/railway-cli/README.md)                     | Set up the `railway` CLI for working with [Railway](https://railway.com) projects                                         |
 | [shell-history](src/shell-history/README.md)                 | Preserve shell history across dev container instances/rebuilds                                                            |
-

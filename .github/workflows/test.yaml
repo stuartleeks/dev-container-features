@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - powerapps-cli
           - shell-history
         baseImage:
           - debian:latest
@@ -33,6 +34,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - powerapps-cli
           - azure-cli-persistence
           - shell-history
           - dev-tunnels

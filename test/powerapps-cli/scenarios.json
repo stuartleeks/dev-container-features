@@ -1,0 +1,9 @@
+{
+    "non_root_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "powerapps-cli": {}
+        },
+        "remoteUser": "vscode"
+    }
+}
