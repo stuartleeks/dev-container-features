@@ -1,6 +1,6 @@
 {
     "name": "dev-container-features",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -12,7 +12,7 @@
         }
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
     },
     "postCreateCommand": "npm install -g @devcontainers/cli"
 }
