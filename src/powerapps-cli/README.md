@@ -1,6 +1,7 @@
+
 # Power Platform CLI (with persistence) (powerapps-cli)
 
-Install the Power Platform CLI (`pac`) and preserve configuration and authentication across container rebuilds.
+Install the Power Platform CLI (pac) and preserve configuration and authentication across container rebuilds
 
 ## Example Usage
 
@@ -12,7 +13,9 @@ Install the Power Platform CLI (`pac`) and preserve configuration and authentica
 
 ## Options
 
-This feature has no options.
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+
 
 ## Persistence
 
@@ -36,3 +39,8 @@ See Microsoft's [installation documentation](https://learn.microsoft.com/en-us/p
 | Version | Notes |
 | ------- | ----- |
 | 0.0.1 | Initial version |
+
+
+---
+
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features/blob/main/src/powerapps-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
