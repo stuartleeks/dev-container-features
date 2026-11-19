@@ -1,0 +1,10 @@
+{
+    "non-root": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "remoteUser": "vscode",
+        "updateRemoteUserUID": true,
+        "features": {
+            "github-copilot-cli": {}
+        }
+    }
+}

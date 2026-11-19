@@ -38,6 +38,7 @@ jobs:
           - azure-cli-persistence
           - shell-history
           - dev-tunnels
+          - github-copilot-cli
     steps:
       - uses: actions/checkout@v4
 
