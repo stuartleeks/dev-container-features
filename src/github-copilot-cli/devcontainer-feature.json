@@ -1,11 +1,12 @@
 {
     "name": "GitHub Copilot CLI (with persistence)",
     "id": "github-copilot-cli",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Install GitHub Copilot CLI and configure it to store configuration in a mounted volume to preserve across container builds",
     "options": {},
     "containerEnv": {
-        "COPILOT_HOME": "/dc/github-copilot-cli"
+        "COPILOT_HOME": "/dc/github-copilot-cli",
+        "PATH": "/usr/local/share/stuartleeks-devcontainer-features/github-copilot-cli/cli/bin:${PATH}"
     },
     "mounts": [
         {

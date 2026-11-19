@@ -22,5 +22,8 @@ test:
 test-azure-cli-persistence:
 	devcontainer features test --features azure-cli-persistence --base-image mcr.microsoft.com/devcontainers/base:ubuntu
 
+test-github-copilot-cli:
+	devcontainer features test --features github-copilot-cli --base-image mcr.microsoft.com/devcontainers/base:ubuntu
+
 test-railway-cli:
 	devcontainer features test --features railway-cli --base-image mcr.microsoft.com/devcontainers/base:ubuntu

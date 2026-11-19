@@ -7,10 +7,12 @@ set -e
 # - installs GitHub Copilot CLI via https://gh.io/copilot-install
 #
 # `oncreate.sh`
+# - fixes installation ownership after remote user UID/GID remapping
 # - fixes permissions on the mounted volume so the user can write to it
 # (COPILOT_HOME is set to /dc/github-copilot-cli via containerEnv in devcontainer-feature.json)
 
 FEATURE_DIR="/usr/local/share/stuartleeks-devcontainer-features/github-copilot-cli"
+INSTALL_PREFIX="$FEATURE_DIR/cli"
 LOG_FILE="$FEATURE_DIR/log.txt"
 
 log() {
@@ -25,6 +27,7 @@ else
 fi
 
 $SUDO chown -R "$(id -u):$(id -g)" "$LOG_FILE"
+$SUDO chown -R "$(id -u):$(id -g)" "$INSTALL_PREFIX"
 
 log "In OnCreate script"
 if [ -f "$FEATURE_DIR/markers/oncreate" ]; then
